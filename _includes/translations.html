@@ -1,0 +1,23 @@
+{% if include.translations %}
+{% assign translations = include.translations %}
+{% else %}
+{% assign translations = page.translations %}
+{% endif %}
+
+{% if translations %}
+{% if include.hide_heading != true %}
+<h3 id="translations">Translations</h3>
+{% endif %}
+<ul class="translations">
+{% for translation in translations %}
+<li class="{{ translation.language }}">
+<a href="{{ translation.url }}" target="_blank">{{ translation.language }} translation</a>
+by
+<a href="{{ translation.author_url }}" target="_blank">{{ translation.author }}</a>
+</li>
+{% endfor %}
+</ul>
+{% if include.hide_link != true %}
+<p>Want to help? <a href="{{ '/translations' | absolute_url }}">Add a translation</a>!</p>
+{% endif %}
+{% endif %}
