@@ -3,6 +3,7 @@ env
 .DS_Store
 .s3-website.json
 node_modules/
+vendor/
 
 _site
 .sass-cache
