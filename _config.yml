@@ -69,3 +69,5 @@ exclude:
   - gulpfile.js
   - package.json
   - README.md
+  - vendor
+  
